@@ -2,6 +2,7 @@
 #!/usr/bin/env python3
 import Mock.GPIO as GPIO
 import time
+import pcf8574_io
 GPIO.setwarnings(False)
 
 #LSM asci gui

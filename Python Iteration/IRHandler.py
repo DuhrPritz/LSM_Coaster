@@ -1,28 +1,52 @@
 #https://pypi.org/project/pcf8574-io/
 import pcf8574_io
+import Mock.GPIO as GPIO
+import time
 
-# You can use up to 8 PCF8574 boards
-# the board will start in input mode
-# the pins are HIGH in input mode
+GPIO.setwarnings(False)
+
 p1 = pcf8574_io.PCF(0x20)
-
-# You can use multiple boards with different addresses
-#p2 = pcf8574_io.PCF(0x21)
-
-# p0 to p7 are the pins name
-# INPUT or OUTPUT is the mode
 p1.pin_mode("p0", "INPUT")
-print(p1.read("p0"))
-
-# You can write and read the output pins
-# use HIGH or LOW to set the pin, HIGH is +3.3v LOW is 0v
-p1.pin_mode("p7", "OUTPUT")
-p1.write("p7", "LOW")
-print(p1.read("p7"))
-
-# Additional you can do the following
-p1.set_i2cBus(1)
-p1.get_i2cBus()
-print(p1.get_pin_mode("p7")) # returns string OUTPUT, INPUT
-print(p1.is_pin_output("p7")) # returns boolean True, False
-print(p1.get_all_mode()) # returns list of all pins ["OUTPUT","INPUT",...etc]
+p1.pin_mode("p1", "INPUT")
+p1.pin_mode("p2", "INPUT")
+p1.pin_mode("p3", "INPUT")
+p1.pin_mode("p4", "INPUT")
+p1.pin_mode("p5", "INPUT")
+p1.pin_mode("p6", "INPUT")
+p1.pin_mode("p7", "INPUT")
+p2 = pcf8574_io.PCF(0x21)
+p2.pin_mode("p0", "INPUT")
+p2.pin_mode("p1", "INPUT")
+p2.pin_mode("p2", "INPUT")
+p2.pin_mode("p3", "INPUT")
+p2.pin_mode("p4", "INPUT")
+p2.pin_mode("p5", "INPUT")
+p2.pin_mode("p6", "INPUT")
+p2.pin_mode("p7", "INPUT")
+p3 = pcf8574_io.PCF(0x22)
+p3.pin_mode("p0", "INPUT")
+p3.pin_mode("p1", "INPUT")
+p3.pin_mode("p2", "INPUT")
+p3.pin_mode("p3", "INPUT")
+p3.pin_mode("p4", "INPUT")
+p3.pin_mode("p5", "INPUT")
+p3.pin_mode("p6", "INPUT")
+p3.pin_mode("p7", "INPUT")
+p4 = pcf8574_io.PCF(0x23)
+p4.pin_mode("p0", "INPUT")
+p4.pin_mode("p1", "INPUT")
+p4.pin_mode("p2", "INPUT")
+p4.pin_mode("p3", "INPUT")
+p4.pin_mode("p4", "INPUT")
+p4.pin_mode("p5", "INPUT")
+p4.pin_mode("p6", "INPUT")
+p4.pin_mode("p7", "INPUT")
+p5 = pcf8574_io.PCF(0x24)
+p5.pin_mode("p0", "INPUT")
+p5.pin_mode("p1", "INPUT")
+p5.pin_mode("p2", "INPUT")
+p5.pin_mode("p3", "INPUT")
+p5.pin_mode("p4", "INPUT")
+p5.pin_mode("p5", "INPUT")
+p5.pin_mode("p6", "INPUT")
+p5.pin_mode("p7", "INPUT")
