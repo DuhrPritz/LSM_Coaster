@@ -13,4 +13,3 @@ def setNorth():
 def setSouth():
 def setOff():
 def pulse():
-
